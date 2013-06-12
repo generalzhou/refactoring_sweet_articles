@@ -1,0 +1,11 @@
+<% @cats_and_articles.each do |category, articles| %>
+  <h3><%= category.name %></h3>
+  <ul>
+    <% articles.each do |article| %>
+      <li>
+        <%= link_to article, category_name: category, title: article.title%>
+        <a href="<%= article.url %>"><%= article.title %></a>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
